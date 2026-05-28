@@ -1,0 +1,25 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "asaintnicolas-emdash",
+	"main": "./src/worker.ts",
+	"compatibility_date": "2026-02-24",
+	"compatibility_flags": ["nodejs_compat"],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "asaintnicolas-emdash-db","database_id": "8e738ba5-a0d5-4f14-8a45-d62ee7a703d7",
+		},
+	],
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "asaintnicolas-emdash-media","preview_bucket_name": "asaintnicolas-emdash-media",
+		},
+	],
+	// Worker Loader for plugin sandboxing
+	"worker_loaders": [
+		{
+			"binding": "LOADER",
+		},
+	],
+}
